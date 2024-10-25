@@ -23,11 +23,15 @@ npm daily installs sets the baseline for the day
 GOOGLE trends worldwide trending data sets a fluctuation point
 Google trends interest by region sets a + or - for that country
 
-100 china = 100
-63 pakistan = 100/63
-
+if baseline == 100
+china last 10 mins === 100 interest price = 100*100
+any interest over 0 adds value over baseline 
+0 interest will randomly either cost baseline OR below
 
 Twitter mentions recorded in the last 10 mins or so (have to figure this one out)
 will fluctuate price points somehow tbd
 
 User following + engagement == size of adjustment
+
+
+
