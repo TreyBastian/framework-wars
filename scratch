@@ -20,10 +20,12 @@ what causes stocks to be created?
      framework_unit {
          id
          framework_id
-         location_id
-         OR
-         user_id
+
+         location_id (only has value if no user_id)
+         user_id (only has value if user_id)
      }
+
+     SELECT * from framework_unit WHERE location_id = "x";
 
      trade_table {
          user_id index
