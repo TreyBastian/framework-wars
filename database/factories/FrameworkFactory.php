@@ -17,7 +17,32 @@ class FrameworkFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->unique()->jobTitle(),
+            'name' => fake()->unique()->randomElements(['Laravel',
+                'Symfony',
+                'Django',
+                'Flask',
+                'Ruby on Rails',
+                'Express',
+                'Spring Boot',
+                'ASP.NET',
+                'Vue.js',
+                'React',
+                'Angular',
+                'Svelte',
+                'Ember.js',
+                'CakePHP',
+                'Zend Framework',
+                'CodeIgniter',
+                'Yii',
+                'Meteor',
+                'Phoenix',
+                'FastAPI',
+                'Next.js',
+                'Nuxt.js',
+                'Backbone.js',
+                'Play Framework',
+                'Koa',
+                'NestJS']),
         ];
     }
 }
