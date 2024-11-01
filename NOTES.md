@@ -1,4 +1,7 @@
-each framework stock unit should be unique and traceable
+# Notes
+> [!NOTE]
+> These notes are just a stream of conciousness as I develop this.
+> This  is not documentation and is probably not accurate as to what is implemented
 
 what causes stocks to be created?
 - random event throughout the day
