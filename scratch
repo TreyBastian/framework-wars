@@ -16,21 +16,33 @@ what causes stocks to be created?
      * IE react has 500 across regions vue has 500 across regions etc etc
 
 
+    location_snapshot {
+        id
+        user_id
+        location_id
+        elements
+            {react: 5, vue: {qty: 10, price: 50}}
+        created_at:
+    }
 
-     framework_unit {
+   x  framework_unit {
          id
          framework_id
 
          location_id (only has value if no user_id)
          user_id (only has value if user_id)
+         trades
      }
+
+     UPDATE framework_unit where framework_id = id WHERE location_id LIMIT 10
 
      SELECT * from framework_unit WHERE location_id = "x";
 
-     trade_table {
+    x trade_table {
          user_id index
          location_id index
          direction "BUY" | "SELL" index
-         framework_unit_id index
          price
+         ammt
+         hasMany framework_ids
      }
