@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('frameworks', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->text('name')->unique();
+            $table->string('url')->unique();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }
