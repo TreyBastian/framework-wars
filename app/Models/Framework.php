@@ -12,6 +12,12 @@ class Framework extends Model
     /** @use HasFactory<\Database\Factories\FrameworkFactory> */
     use HasFactory, HasUuids;
 
+    protected $fillable = [
+        'name',
+        'url',
+        'logo'
+    ];
+
     public function units(): HasMany
     {
         return $this->hasMany(FrameworkUnit::class);

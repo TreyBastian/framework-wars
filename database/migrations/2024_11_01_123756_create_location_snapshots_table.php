@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::create('framework_location_snapshot', function (Blueprint $table) {
             $table->foreignUuid('framework_id')->constrained()->cascadeOnDelete();
-            $table->foreignUuid('location_snapshot_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('location_snapshot_id')->constrained('location_snapshots', 'user_id')->cascadeOnDelete();
             $table->integer('quantity');
             $table->bigInteger('unit_price');
         });
